@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@200;300;400&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/fef6e6db77.js" crossorigin="anonymous"></script>
+  <title>Gloam</title>
+</head>
+<body>
+  <header class="full-bleed-3">
+    <nav>
+      <a href="">About</a>
+      <a href=""><h1>Gloam</h1></a>
+      <a href="">Music</a>
+    </nav>
+  </header>
+
+  <div class="spacer full-bleed-3"></div>
+
+  <main>
+
+    <div class="cover-art-container full-bleed-3">
+      <img src="./img/Gloam - Ritual.jpg" alt=""class="feature-art">
+      <div class="text-box">
+        <p class="title">"Ritual" - Out Now</p>
+        <a href="" class="button">Listen</a>
+      </div>
+    </div>
+
+    <div id="about" class="full-bleed">
+        <h2>About</h2>
+        <div>
+          <p>Musician / Composer</p>
+          <p>Gloam is a solo endeavor by Lensanok Imsong, a musician by day and lab technician by night. Raised in a religious family, Lensanok incorporates calm and meditative themes throughout his music.</p>
+        </div>
+    </div>
+
+    <div id="listen" class="full-bleed">
+      <iframe style="border-radius:12px"
+      src="https://open.spotify.com/embed/artist/1v2KhegMgbgECEdtYhcdO5?utm_source=generator" width="100%" height="380"
+      frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+      loading="lazy"></iframe>
+    </div>
+
+    <div id="releases">
+      <h2>Releases</h2>
+      <p>2022 | Brief Encounter</p>
+      <p>2022 | A New Beginning</p>
+      <p>2022 | You're All I know</p>
+      <p>2022 | Ritual</p>
+    </div>
+    
+  </main>
+
+  <footer class="full-bleed-2">
+    <div class="container">
+      <form onsubmit="sendEmail()">
+        <h3>Sign up for newsletters</h3>
+        <input type="text" id="name" placeholder="Your Name" required><br/>
+        <input type="email" id="email" placeholder="Email id" required><br/>
+        <button type="submit">OK</button>
+      </form>
+    </div>
+
+    <div class="social-links">
+      <a href="https://open.spotify.com/artist/1v2KhegMgbgECEdtYhcdO5?si=S1CvD9MIS0u_0C7_bFsnsA"><i class="fa-brands fa-spotify"></i></a>
+      <a href="https://music.apple.com/us/artist/gloam/1603665530"><i class="fa-brands fa-apple"></i></a>
+      <a href="https://gloamsound.bandcamp.com/"><i class="fa-brands fa-bandcamp"></i></a>
+      <a href="https://www.instagram.com/gloam.sound/"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://www.facebook.com/gloam.sound/"><i class="fa-brands fa-facebook"></i></a>
+    </div>
+
+    <p>&copyGloam 2022</p>
+  </footer>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script>
+    function sendEmail() {
+      Email.send({
+        Host: "smtp.gmail.com",
+        Username: "gloam.sound@gmail.com",
+        Password: "",
+        To: 'gloam.sound@gmail.com',
+        From: document.getElementById("email").value,
+        Subject: "New Contact",
+        Body: "Name " + document.getElementById("name").value + "<br> Email: " + document.getElementById("email").value
+      }).then(
+        message => alert("Thank you")
+      );
+    }
+  </script>
+</body>
+</html>
