@@ -12,11 +12,11 @@
   <title>Gloam</title>
 </head>
 <body>
-  <header class="full-bleed-3">
+  <header class="full-bleed-3" id="hero">
     <nav>
-      <a href="">About</a>
-      <a href=""><h1>Gloam</h1></a>
-      <a href="">Music</a>
+      <a href="#about-scroll">About</a>
+      <a href="#hero" class="logo">Gloam</a>
+      <a href="#listen-scroll">Music</a>
     </nav>
   </header>
 
@@ -28,31 +28,41 @@
       <img src="./img/Gloam - Ritual.jpg" alt=""class="feature-art">
       <div class="text-box">
         <p class="title">"Ritual" - Out Now</p>
-        <a href="" class="button">Listen</a>
+        <a href="https://distrokid.com/hyperfollow/gloam/ritual" class="button">Listen</a>
       </div>
     </div>
 
-    <div id="about" class="full-bleed">
-        <h2>About</h2>
-        <div>
-          <p>Musician / Composer</p>
-          <p>Gloam is a solo endeavor by Lensanok Imsong, a musician by day and lab technician by night. Raised in a religious family, Lensanok incorporates calm and meditative themes throughout his music.</p>
-        </div>
+    <div id="about-scroll"></div>
+
+    <div class="section-container about-section">
+      <div id="about" class="full-bleed">
+          <h2>About</h2>
+          <div>
+            <p>Musician / Composer</p>
+            <p>Gloam is a solo endeavor by Lensanok Imsong, a musician by day and lab technician by night. Lensanok incorporates calm and meditative themes throughout his music.</p>
+          </div>
+      </div>
     </div>
 
-    <div id="listen" class="full-bleed">
-      <iframe style="border-radius:12px"
-      src="https://open.spotify.com/embed/artist/1v2KhegMgbgECEdtYhcdO5?utm_source=generator" width="100%" height="380"
-      frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-      loading="lazy"></iframe>
+    <div id="listen-scroll"></div>
+
+    <div class="section-container">
+      <div id="listen" class="full-bleed">
+        <iframe style="border-radius:12px"
+          src="https://open.spotify.com/embed/artist/1v2KhegMgbgECEdtYhcdO5?utm_source=generator" width="100%" height="380"
+          frameBorder="0" allowfullscreen=""
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      </div>
     </div>
 
-    <div id="releases">
-      <h2>Releases</h2>
-      <p>2022 | Brief Encounter</p>
-      <p>2022 | A New Beginning</p>
-      <p>2022 | You're All I know</p>
-      <p>2022 | Ritual</p>
+    <div class="section-container">
+      <div id="releases">
+        <h2>Releases</h2>
+        <p>2022 | Brief Encounter</p>
+        <p>2022 | A New Beginning</p>
+        <p>2022 | You're All I know</p>
+        <p>2022 | Ritual</p>
+      </div>
     </div>
     
   </main>
@@ -62,7 +72,7 @@
       <form onsubmit="sendEmail()">
         <h3>Sign up for newsletters</h3>
         <input type="text" id="name" placeholder="Your Name" required><br/>
-        <input type="email" id="email" placeholder="Email id" required><br/>
+        <input type="email" id="email" placeholder="Email" required><br/>
         <button type="submit">OK</button>
       </form>
     </div>

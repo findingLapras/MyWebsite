@@ -4,6 +4,7 @@
 
 html {
   font-family: 'Inter Tight', sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -14,7 +15,13 @@ body {
 }
 
 header {
-  text-align: center;
+  /* text-align: center; */
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  margin-top: 6em;
 }
 
 h1,
@@ -41,19 +48,27 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: white;
+  background-color: #a4b8c424;
   padding-top: 1em;
+  position: fixed;
+  z-index: 5;
+  width: 100%;
 }
 
-/* a:hover {
+a:hover {
   cursor: pointer;
-  color: #f2f2f2;
-} */
+  color: #A4B8C4;
+}
+
+.logo {
+  font-size: 1.5rem;
+}
 
 .cover-art-container {
   text-align: center;
-  padding-bottom: 2em;
+  /* padding-bottom: 2em; */
   background-color: white;
+  height: 100vh;
 }
 
 .spacer {
@@ -61,7 +76,6 @@ nav {
   width: 100%;
   background-color: white;
   color: white;
-  /* border: black solid 1px; */
 }
 
 .feature-art {
@@ -92,8 +106,19 @@ nav {
   padding: 1rem;
 }
 
+.button:hover {
+  color: black;
+  background-color: white;
+  outline: 1px solid black;
+}
+
 .fa-brands {
   font-size: 1.2rem;
+  transition: 0.3s;
+}
+
+.fa-brands:hover {
+  color: white;
 }
 
 .social-links {
@@ -128,9 +153,19 @@ nav {
   padding: 1em 1.5em;
 }
 
+#about-scroll {
+  height: 4em;
+  width: 100%;
+}
+
 #listen {
   background-color: black;
   padding-bottom: .15em;
+}
+
+#listen-scroll {
+  height: 4em;
+  width: 100%;
 }
 
 #releases {
@@ -171,5 +206,75 @@ form button {
   outline: none;
   cursor: pointer;
   width: 150px;
+  transition: .3s;
 }
+
+form button:hover {
+  color: black;
+  background-color: #A4B8C4;
+  outline: 1px solid black;
+}
+
+
+@media only screen and (min-width: 768px) {
+
+  /* For desktop: */
+
+  nav a {
+    font-size: 1.35rem;
+    transform: .3s;
+  }
+
+  nav a:hover {
+    font-size: 1.65rem;
+  }
+
+  .logo {
+    font-size: 1.75rem;
+  }
+
+  .feature-art {
+      width: 30vw;
+      max-width: 600px;
+  }
+  
+  #about {
+    background-color: #FCFAFA;
+    padding: 1em 4em;
+    max-width: 800px;
+  }
+
+  .about-section {
+    display: flex;
+    justify-content: center;
+  }
+
+  #listen {
+    background-color: white;
+    padding: 0 4em .15em;
+  }
+
+  iframe {
+    max-width: 1000px;
+  }
+
+  .section-container {
+    text-align: center;
+  }
+
+  #releases {
+    padding: .85em 4em 1em;
+    background-color: white;
+  }
+
+  .fa-brands {
+    font-size: 1.5rem;
+    transition: 0.3s;
+    padding: 1em;
+  }
+  
+}
+
+
+
 
