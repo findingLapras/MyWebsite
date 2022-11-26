@@ -24,8 +24,16 @@
 
   <main>
 
+<!-- VIDEO BG -->
+    <!-- <video autoplay muted loop id="myVideo">
+      <source src="./img/pexels-nikita-ryumshin-7872729.mp4" type="video/mp4">
+    </video> -->
+<!-- VIDEO BG -->
+
     <div class="cover-art-container full-bleed-3">
-      <img src="./img/Gloam - Ritual.jpg" alt=""class="feature-art">
+      <div class="feature-art-container">
+        <img src="./img/Gloam - Ritual.jpg" alt=""class="feature-art">
+      </div>
       <div class="text-box">
         <p class="title">"Ritual" - Out Now</p>
         <a href="https://distrokid.com/hyperfollow/gloam/ritual" class="button">Listen</a>
@@ -36,11 +44,17 @@
 
     <div class="section-container about-section">
       <div id="about" class="full-bleed">
+        <div>
+          <img src="./img/image0 2.png" alt="" class="picture-me">
+        </div>  
+        
+        <div class="about-text-box">
           <h2>About</h2>
-          <div>
-            <p>Musician / Composer</p>
-            <p>Gloam is a solo endeavor by Lensanok Imsong, a musician by day and lab technician by night. Lensanok incorporates calm and meditative themes throughout his music.</p>
-          </div>
+            <div>
+              <p>Musician / Composer</p>
+              <p>Gloam is a solo endeavor by Lensanok Imsong, a musician by day and lab technician by night. Lensanok incorporates calm and meditative themes throughout his music.</p>
+            </div>
+        </div>
       </div>
     </div>
 
@@ -69,12 +83,16 @@
 
   <footer class="full-bleed-2">
     <div class="container">
-      <form onsubmit="sendEmail()">
-        <h3>Sign up for newsletters</h3>
-        <input type="text" id="name" placeholder="Your Name" required><br/>
-        <input type="email" id="email" placeholder="Email" required><br/>
-        <button type="submit">OK</button>
+
+      <form action="https://formsubmit.co/68fce3526548806da3d62f7fbf0c4705" method="POST">
+        <h3>Sign up for newsletters!</h3>
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="hidden" name="_next" value="#">
+        <button type="submit">ok</button>
       </form>
+
+
     </div>
 
     <div class="social-links">
@@ -85,23 +103,7 @@
       <a href="https://www.facebook.com/gloam.sound/"><i class="fa-brands fa-facebook"></i></a>
     </div>
 
-    <p>&copyGloam 2022</p>
+    <p class="copyright">&copy Gloam 2022</p>
   </footer>
-  <script src="https://smtpjs.com/v3/smtp.js"></script>
-  <script>
-    function sendEmail() {
-      Email.send({
-        Host: "smtp.gmail.com",
-        Username: "gloam.sound@gmail.com",
-        Password: "",
-        To: 'gloam.sound@gmail.com',
-        From: document.getElementById("email").value,
-        Subject: "New Contact",
-        Body: "Name " + document.getElementById("name").value + "<br> Email: " + document.getElementById("email").value
-      }).then(
-        message => alert("Thank you")
-      );
-    }
-  </script>
 </body>
 </html>
