@@ -90,7 +90,8 @@ a:hover {
 }
 
 .feature-art {
-  width: 60vw;
+  /* max-width: 60vw; */
+  width: 200px;
 }
 
 .feature-art-container {
@@ -279,8 +280,8 @@ form button:hover {
   }
 
   .feature-art {
-      width: 30vw;
-      max-width: 600px;
+      /* width: 30vw; */
+      width: 200px;
   }
   
   #about {
@@ -323,6 +324,12 @@ form button:hover {
   
 }
 
+@media only screen and (min-width: 1100px) {
+  .feature-art {
+    width: 300px;
+    padding-top: 3em;
+  }
+}
 
 
 
